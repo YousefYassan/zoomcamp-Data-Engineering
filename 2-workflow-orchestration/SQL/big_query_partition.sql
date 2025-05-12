@@ -68,6 +68,9 @@ INSERT INTO public.green_tripdata_partitioned
 SELECT * FROM public.green_tripdata;
 
 
+------------------------------------- if you wanna more control in your table
+
+
 /*
 SELECT 
     tableoid::regclass AS partition_name,
@@ -76,7 +79,6 @@ FROM public.yellow_tripdata_partitioned
 GROUP BY tableoid
 ORDER BY partition_name;
 */
--- if you wanna more control in your table
 /*
 CREATE OR REPLACE FUNCTION create_monthly_partitions(
     start_date DATE,
