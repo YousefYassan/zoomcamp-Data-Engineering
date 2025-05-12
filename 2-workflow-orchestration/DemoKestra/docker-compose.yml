@@ -12,11 +12,11 @@ services:
     volumes:
       - C:/Users/DELL/demo/postgres-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: kestra
-      POSTGRES_USER: kestra
-      POSTGRES_PASSWORD: k3str4
+      POSTGRES_DB: YourDB
+      POSTGRES_USER: YOURUSER
+      POSTGRES_PASSWORD: YOUR
     ports:
-      - "5433:5432"  # Map PostgreSQL to port 5433 on the host
+      - "5433:5432"  # Map PostgreSQL to port 5433 on the host  if you wanna change it to 5432 change it
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
       interval: 30s
@@ -44,7 +44,7 @@ services:
             basicAuth:
               enabled: false
               username: "admin@kestra.io" # it must be a valid email address
-              password: kestra
+              password: YORPASS
           repository:
             type: postgres
           storage:
