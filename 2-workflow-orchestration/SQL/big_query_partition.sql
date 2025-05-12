@@ -68,7 +68,7 @@ INSERT INTO public.green_tripdata_partitioned
 SELECT * FROM public.green_tripdata;
 
 
-------------------------------------- if you wanna more control in your table
+------------------------------------- if you wanna more control in your table do next query
 
 
 /*
