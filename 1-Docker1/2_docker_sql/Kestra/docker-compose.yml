@@ -8,11 +8,11 @@
 #   postgres:
 #     image: postgres
 #     volumes:
-#       - C:/Users/DELL/2_docker_sql/kestra/postgres-data:/var/lib/postgresql/data
+#       - C:/Users/DELL/2_docker_sql/kestra/postgres-data:/var/lib/postgresql/data #your Path
 #     environment:
-#       POSTGRES_DB: kestra
-#       POSTGRES_USER: kestra
-#       POSTGRES_PASSWORD: k3str4
+#       POSTGRES_DB: YourDBName
+#       POSTGRES_USER: YourUserName
+#       POSTGRES_PASSWORD: YourPass
 #     healthcheck:
 #       test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
 #       interval: 30s
@@ -32,16 +32,16 @@
 #       KESTRA_CONFIGURATION: |
 #         datasources:
 #           postgres:
-#             url: jdbc:postgresql://postgres:5432/kestra
+#             url: jdbc:postgresql://postgres:5432/kestra 
 #             driverClassName: org.postgresql.Driver
-#             username: kestra
-#             password: k3str4
+#             username: YouerUserName
+#             password: YourPass
 #         kestra:
 #           server:
 #             basicAuth:
 #               enabled: false
 #               username: "admin@kestra.io" # it must be a valid email address
-#               password: kestra
+#               password: YourPass
 #           repository:
 #             type: postgres
 #           storage:
