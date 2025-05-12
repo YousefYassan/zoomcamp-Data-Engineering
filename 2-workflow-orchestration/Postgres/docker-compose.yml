@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  postgres-db:
+    image: postgres
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: kestra
+      POSTGRES_PASSWORD: k3str4
+      POSTGRES_DB: postgres-zoomcamp
+    ports:
+      - "5434:5432"  # Changed port from 5433 to 5434
+    volumes:
+      - C:/Users/DELL/POSTGRES-DB2/postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
